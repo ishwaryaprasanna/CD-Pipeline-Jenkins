@@ -5,7 +5,7 @@ pipeline {
             steps {
                     "npm install"
                     "npm run build"
-                }
+                
                 
             }
         }
