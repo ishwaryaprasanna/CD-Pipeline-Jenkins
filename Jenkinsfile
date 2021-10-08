@@ -9,8 +9,8 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                bat "rm -rf /var/www/jenkins-react-app"
-                bat "cp -r ${WORKSPACE}/build/ /var/www/jenkins-react-app/"
+                bat "Del /s /q /f *.* /var/www/jenkins-react-app"
+                bat "xcopy ${WORKSPACE}/build/ /var/www/jenkins-react-app/"
             }
         }
     }
