@@ -9,7 +9,7 @@ pipeline {
         }
         stage("Deploy") {
             steps {
-                bat "Del /s /var/www/jenkins-react-app"
+                bat "rd /s /q /var/www/jenkins-react-app"
                 bat "xcopy ${WORKSPACE}/build/ /var/www/jenkins-react-app/"
             }
         }
